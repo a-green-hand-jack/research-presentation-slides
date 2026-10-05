@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Lint a storyline.md (format: assets/storyline-template.md).
+"""检查 storyline.md（格式：assets/storyline-template.md）。
 
-Checks (ids refer to references/review-checklist.md):
-  M1  core_message present and is one sentence
-  S2  content-slide titles are assertions, not topics
-  T3  a contribution/preview slide appears in the first 25% of main slides
-  T6  last main slide is not "thank you / questions"
-  T7  planned minutes vs duration_min
-  T9  backup slides exist
-  also: duplicate titles, unknown tags, overly long titles
+检查项（编号对应 references/review-checklist.md）：
+  M1  core_message 存在且为一句话
+  S2  内容页标题是陈述句，不是话题
+  T3  贡献/预告页出现在主线前 25% 内
+  T6  最后一页主线不是「thank you / questions」
+  T7  计划分钟数与 duration_min 匹配
+  T9  存在备份页
+  额外：重复标题、未知标签、标题过长
 
-Usage:
+用法：
   python lint_storyline.py storyline.md [--json]
-Exit code: 1 if any ERROR, else 0.
+退出码：如有任何 ERROR 则为 1，否则为 0。
 """
 import argparse
 import json
@@ -23,12 +23,12 @@ KNOWN_TAGS = {
     "hook", "motivation", "question", "contribution", "outline", "section",
     "method", "result", "discussion", "takeaway", "future", "ack", "backup",
 }
-# Tags whose titles may legitimately be topic-like.
+# 标题可以合法为话题式的标签。
 TOPIC_OK_TAGS = {"section", "outline", "ack", "backup"}
 NON_TIMED_TAGS = {"backup"}
 
 TOPIC_WORDS = {
-    # English
+    # 英文
     "introduction", "intro", "background", "motivation", "method", "methods",
     "methodology", "approach", "model", "results", "result", "experiments",
     "experiment", "evaluation", "discussion", "conclusion", "conclusions",
@@ -36,7 +36,7 @@ TOPIC_WORDS = {
     "limitations", "data", "setup", "experimental setup", "analysis",
     "contributions", "acknowledgments", "acknowledgements", "thanks",
     "q&a", "questions", "thank you", "the end",
-    # Chinese
+    # 中文
     "引言", "介绍", "背景", "研究背景", "动机", "方法", "研究方法", "模型", "结果",
     "实验", "实验结果", "评估", "讨论", "结论", "总结", "大纲", "目录", "概述",
     "相关工作", "未来工作", "局限", "数据", "实验设置", "分析", "贡献", "致谢",
@@ -69,7 +69,7 @@ def parse_frontmatter(text):
 
 
 def title_len(title):
-    """Rough 'word' length: CJK chars count 0.5 word each."""
+    """粗略「词」长度：CJK 字符每个计 0.5 词。"""
     cjk = len(CJK_RE.findall(title))
     latin = len(re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*", CJK_RE.sub(" ", title)))
     return latin + cjk / 2.0, cjk, latin
@@ -84,7 +84,7 @@ def is_topic_title(title):
     if base in TOPIC_WORDS:
         return True
     words, cjk, latin = title_len(title)
-    # Very short titles with no verb-like signal are almost always topics.
+    # 极短标题且没有动词特征的几乎总是话题。
     if cjk == 0 and latin <= 2:
         return True
     if latin == 0 and cjk <= 5:
@@ -150,7 +150,7 @@ def lint(path):
         if words > 16 or cjk > 32:
             add("WARN", "S2", "标题过长，压缩到一行能读完", s["n"])
 
-    # backup must come after main
+    # 备份页必须位于主线之后
     if backup and main and min(b["n"] for b in backup) < max(m["n"] for m in main):
         add("WARN", "T9", "备份页应放在全部主线页面之后")
 
@@ -185,9 +185,9 @@ def lint(path):
         if len(timed) == len(main):
             total = sum(s["min"] for s in main)
             if total > dur * 1.05:
-                add("ERROR", "T7", f"计划用时 {total:g} min 超过时长 {dur:g} min → 删减或移入备份")
+                add("ERROR", "T7", f"计划用时 {total:g} 分钟超过时长 {dur:g} 分钟 → 删减或移入备份")
             elif total < dur * 0.75:
-                add("WARN", "T7", f"计划用时 {total:g} min 明显少于 {dur:g} min；确认没有遗漏")
+                add("WARN", "T7", f"计划用时 {total:g} 分钟明显少于 {dur:g} 分钟；确认没有遗漏")
         else:
             if timed:
                 add("WARN", "T7", f"{len(main) - len(timed)} 页没有标注分钟数，用页数估算")
@@ -198,7 +198,7 @@ def lint(path):
                 add("WARN", "T7", f"{len(main)} 页主线对 {dur:g} 分钟偏少（经验范围约 {lo:.0f}–{hi:.0f} 页）")
         for s in main:
             if s["min"] is not None and s["min"] > 3:
-                add("WARN", "S1", f"单页计划 {s['min']:g} min，通常意味着一页装了多个观点", s["n"])
+                add("WARN", "S1", f"单页计划 {s['min']:g} 分钟，通常意味着一页装了多个观点", s["n"])
 
     # T9
     if not backup:
@@ -221,12 +221,12 @@ def main():
         print(json.dumps({"issues": issues, "n_slides": len(slides)}, ensure_ascii=False, indent=2))
     else:
         main_n = sum(s["tag"] not in NON_TIMED_TAGS for s in slides)
-        print(f"storyline: {main_n} 页主线 + {len(slides) - main_n} 页备份；时长 {meta.get('duration_min', '?')} min")
+        print(f"storyline: {main_n} 页主线 + {len(slides) - main_n} 页备份；时长 {meta.get('duration_min', '?')} 分钟")
         print(f"核心信息：{meta.get('core_message', '(缺失)')}\n")
         for i in sorted(issues, key=lambda x: (x["level"] != "ERROR", x["slide"] or 0)):
             where = f"第 {i['slide']} 页 " if i["slide"] else ""
             print(f"{i['level']:5} [{i['check']}] {where}{i['msg']}")
-        print(f"\n{n_err} ERROR, {len(issues) - n_err} WARN")
+        print(f"\n{n_err} 个错误, {len(issues) - n_err} 个警告")
         print("\n只读标题：")
         for s in slides:
             print(f"  {s['n']:>2}. {s['title']}")

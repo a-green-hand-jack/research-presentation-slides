@@ -3,7 +3,7 @@ name: research-presentation-slides
 description: 制作、改写或评审「展示自己工作」的演示幻灯片（研究报告、会议 talk、组会汇报、答辩、求职 talk、项目/技术分享），与工具无关（PowerPoint、Keynote、Google Slides、Beamer、Marp、Slidev、reveal.js、python-pptx 等均可）。提供分步工作流（talk brief → storyline → slide spec → 制作 → PDF 自动检查 → 评审清单）、模板和检查脚本。只要用户要做 slides/PPT/deck/beamer/presentation/talk、从论文或代码仓库生成报告幻灯片、或让你评审/改进一份已有的 slides，就使用本 skill，即使用户只说「做个 PPT」而没提质量要求。
 ---
 
-# Research Presentation Slides
+# 研究演示幻灯片
 
 本 skill 规定**做一份好的工作展示 slides 的流程和标准**。它不管用什么工具做；工具层面的操作交给对应工具的 skill 或文档（例如 pptx skill、Beamer 文档）。
 

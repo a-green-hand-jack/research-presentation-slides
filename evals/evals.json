@@ -1,5 +1,5 @@
 {
-  "skill_name": "research-presentation-slides",
+  "skill_name": "学术研究演示幻灯片",
   "evals": [
     {
       "id": 1,
@@ -8,10 +8,10 @@
       "files": [],
       "assertions": [
         "storyline.md 存在且 lint_storyline.py 无 ERROR",
-        "内容页标题全部为结论句，无 Introduction/Method/Results 等话题式标题",
+        "内容页标题全部为结论句，无 引言/方法/结果 等话题式标题",
         "主线逻辑页数在 5–18 之间",
         "存在 [backup] 页",
-        "最后一页主内容不是 Thank you / Questions",
+        "最后一页主内容不是 谢谢/提问",
         "运行过 check_deck_pdf.py 且无 ERROR",
         "未出现论文中不存在的数字或引用"
       ]
