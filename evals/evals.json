@@ -1,0 +1,44 @@
+{
+  "skill_name": "research-presentation-slides",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这是我的论文 PDF，帮我做一个 15 分钟的会议报告 slides，用 Beamer。",
+      "expected_output": "先产出 talk-brief.md 与 storyline.md（结论句标题、按观点而非章节组织），lint 通过后再生成 Beamer 源文件；编译导出 PDF 并运行 check_deck_pdf.py 和逐页看图；有备份页；最后一页主内容是结论页；缺失数字用占位符。",
+      "files": [],
+      "assertions": [
+        "storyline.md 存在且 lint_storyline.py 无 ERROR",
+        "内容页标题全部为结论句，无 Introduction/Method/Results 等话题式标题",
+        "主线逻辑页数在 5–18 之间",
+        "存在 [backup] 页",
+        "最后一页主内容不是 Thank you / Questions",
+        "运行过 check_deck_pdf.py 且无 ERROR",
+        "未出现论文中不存在的数字或引用"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "帮我看看这份组会 PPT 哪里不好（附 deck.pdf），下周要讲 20 分钟。",
+      "expected_output": "运行 check_deck_pdf.py，反推 storyline 并 lint，输出带 review-checklist 编号、按严重度排序的问题清单，结构问题优先；给出具体改写建议（如结论句标题示例）。",
+      "files": ["evals/files/group-meeting-deck.pdf"],
+      "assertions": [
+        "评审意见引用了检查清单编号（如 S2、T6）",
+        "问题按 高/中/低 分组，结构问题排在视觉问题前面",
+        "至少给出一个具体的结论句标题改写",
+        "提到了组会场合的必有页（需要大家决定的问题 / 下一步）"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "我们组做了一个开源的向量数据库，想做一个 5 分钟的 lightning talk 介绍它，听众是开发者。README 在仓库里。用 Marp 做。",
+      "expected_output": "按 talk-types.md 的 lightning 配比：一句话问题、一个核心结果图、联系方式/二维码；页数少；不讲实现细节；视觉中心明确。",
+      "files": [],
+      "assertions": [
+        "talk-brief 中场合为 lightning，时长 5 分钟",
+        "主线逻辑页数 ≤ 8",
+        "没有方法细节页或架构细节堆砌",
+        "结尾页包含核心信息和获取方式（链接或二维码占位）"
+      ]
+    }
+  ]
+}
