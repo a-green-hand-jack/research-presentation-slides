@@ -1,98 +1,98 @@
-# 幻灯片设计：单页规则
+# Slide Design: Single-Page Rules
 
-第 3 步的细则。对应评审清单中的 \`S*\` 条目。
+Details for Step 3. Corresponds to the `S*` items in the review checklist.
 
-## 规则
+## Rules
 
-### S1 一页一个观点
-每页只有一个核心目标。复杂内容拆成多页逐步讲。复杂的流程图或架构图，分几页逐步「搭」起来：每页新增一块，最后一页才展示全貌。观众看到全貌时，已经理解了每个部件。
+### S1 One Point Per Slide
+Each slide has only one core goal. Break complex content into multiple slides and explain it step by step. For complex flowcharts or architecture diagrams, build them across several slides: add one block per slide, and only show the full picture on the last slide. By the time the audience sees the full picture, they already understand each component.
 
-### S2 标题写结论
-内容页标题是一句结论，页面其余内容只为这句话服务。只有章节分隔页可以用话题式标题。
+### S2 Titles State Conclusions
+Titles on content slides should be a conclusion; everything else on the slide serves that sentence. Only section divider slides may use topic-style titles.
 
-| 话题式（差） | 结论式（好） |
+| Topic-style (bad) | Conclusion-style (good) |
 |---|---|
-| Results | 去掉预训练后准确率下降 12 个点 |
-| Experiment 2 | 误报率高度依赖样本 |
-| Method | 两阶段检索把延迟降到 40 ms |
-| Related Work | 现有方法都假设数据是平稳的 |
-| Background | 磷酸化位点远多于我们能测到的数量 |
+| Results | Removing pre-training drops accuracy by 12 points |
+| Experiment 2 | False-positive rate depends heavily on samples |
+| Method | Two-stage retrieval reduces latency to 40 ms |
+| Related Work | Existing methods all assume stationary data |
+| Background | Phosphorylation sites far outnumber what we can measure |
 
-### S3 只放会讲到的东西
-讲话时观众的眼睛在屏幕上游走。屏幕上的每个细节都要有讲到的计划；不讲的就不放。资深听众会追问屏幕上出现的任何细节，所以只放你希望他们关注的东西。
+### S3 Only Include What You Will Discuss
+When you speak, the audience's eyes wander across the screen. Every detail on the screen must be something you plan to discuss; if you won't discuss it, don't include it. Experienced listeners will question any detail that appears on screen, so only include what you want them to focus on.
 
-### S4 说的比屏幕上多
-先说屏幕上有什么，再解释、换个说法，再延伸。不要照读屏幕上的文字。
+### S4 Say More Than What's on the Screen
+First say what is on the screen, then explain it, rephrase it, and extend it. Do not read the text on the screen verbatim.
 
-### S5 控制元素数量
-一页的视觉元素（标题、每张图、每个文本块、图标、logo）尽量不超过 6 个。超过后，理解所需的努力急剧上升。注意模板自带的装饰也算元素。
+### S5 Limit the Number of Elements
+A slide's visual elements (title, each figure, each text block, icon, logo) should generally not exceed 6. Beyond that, the effort required to understand the slide rises sharply. Note that decorative elements built into the template also count.
 
-### S6 文字是路标，不是讲稿
-- 读字和听讲用的是同一个认知通道。观众要么读，要么听，两样一起做都会做不好。
-- 用短语，不用完整的长句。要点每条尽量一行，一页最多几条。
-- 与口头内容意思相同的简短文字（冗余短语）有助于记忆，可以保留。
+### S6 Text Is a Signpost, Not a Script
+- Reading and listening use the same cognitive channel. The audience can either read or listen; doing both at once leads to poor performance in both.
+- Use phrases, not complete long sentences. Each bullet should ideally fit on one line; limit the number per slide.
+- Short text that carries the same meaning as the spoken content (redundant phrases) aids memory and can be kept.
 
-### S7 以视觉为中心
-几乎不要出现纯文字页。每页围绕一个视觉元素：数据图、示意图、照片、截图、关键数字放大、前后对比。没有现成的图时，自己画一个简单的示意图，或把关键数字放大，而不是再写一段话。
+### S7 Visual-Centric
+Avoid purely text-based slides. Build each slide around one visual element: a data plot, a diagram, a photo, a screenshot, an enlarged key number, or a before/after comparison. When no ready-made figure exists, draw a simple diagram yourself or enlarge the key number rather than writing another paragraph.
 
-### S8 走神测试
-对每页问：没听你讲话的人抬头看一眼，能不能 get 到要点？同时检查抽象层级：细节是否多到淹没了结论？
+### S8 Glance Test
+Ask of every slide: can someone who hasn't been listening look up and get the point? At the same time, check the abstraction level: are there so many details that they drown out the conclusion?
 
-### S9 公式降级
-能用一句话说清的结论，就不要把推导放在主页面上。
-- 差：完整的分式表达式
-- 好：「技术进步率随劳动份额递减」，推导放备份页
+### S9 Demote Formulas
+If a conclusion can be stated in one sentence, do not put the derivation on the main slide.
+- Bad: a full fractional expression
+- Good: "The rate of technological progress decreases with the labor share," with the derivation on a backup slide
 
-必须展示公式时，只放一个，并用颜色或标注说明每一项的含义。
+When a formula must be shown, include only one, and use color or annotation to explain the meaning of each term.
 
-### S10 当场标注来源
-用别人的图、数据或方法，在当页标注来源。全篇用一致的格式和位置（例如右下角小字）。做这页时就加上，「之后再补」总会忘。署名也要说清楚谁做了哪部分。
+### S10 Cite Sources on the Spot
+When using someone else's figure, data, or method, cite the source on that slide. Use a consistent format and position throughout (e.g., small text in the lower-right corner). Add it when creating the slide—"I'll fill it in later" always gets forgotten. Attribution must also clearly state who did which part.
 
-### S11 逐步揭示，而不是装饰动画
-需要控制信息顺序时，用逐步揭示（复制页面逐步显示，或工具自带的 build/overlay）。不要用飞入、旋转、闪烁之类的装饰动画。
+### S11 Progressive Reveal, Not Decorative Animation
+When you need to control the order of information, use progressive reveal (duplicate the slide and show elements step by step, or use the tool's built-in build/overlay features). Do not use decorative animations such as fly-ins, spins, or flashes.
 
-## 改写示例
+## Revision Examples
 
-### 例 1：文字墙 → 一图一观点
+### Example 1: Wall of Text → One Figure, One Point
 
-**改写前**
-> 标题：Background
-> - 蛋白质相互作用由多种结构域介导，其中 SH2 结构域识别磷酸化酪氨酸
-> - 人类蛋白组中存在大量磷酸化位点，目前的实验技术只能测到其中一小部分
-> - 因此，大量潜在相互作用尚未被表征，这限制了我们对信号网络的理解
-> - 本研究提出一种计算方法……
+**Before**
+> Title: Background
+> - Protein-protein interactions are mediated by multiple domains, among which SH2 domains recognize phosphorylated tyrosine
+> - The human proteome contains a large number of phosphorylation sites, and current experimental techniques can only measure a small fraction
+> - Therefore, a large number of potential interactions remain uncharacterized, limiting our understanding of signaling networks
+> - This study proposes a computational method…
 
-问题：话题式标题；4 段完整句子；没有视觉中心；一页塞了两个观点（机制 + 规模问题）。
+Problem: topic-style title; four complete sentences; no visual anchor; two points crammed into one slide (mechanism + scale).
 
-**改写后（拆成 2 页）**
-> 第 1 页 标题：SH2 结构域通过识别磷酸化酪氨酸来介导相互作用
-> 视觉：一个具体的结合示意图（某个 SH2 结构域与某个磷酸化位点）
-> 文字：无，或一个标注
+**After revision (split into 2 slides)**
+> Slide 1 Title: SH2 domains mediate interactions by recognizing phosphorylated tyrosine
+> Visual: a specific binding diagram (a particular SH2 domain and a phosphorylation site)
+> Text: none, or one label
 >
-> 第 2 页 标题：可能的相互作用远多于我们能测到的数量
-> 视觉：同一张示意图泛化为「多对多」，并标出已测 vs 未测的比例
-> 文字：一个冗余短语，例如「大部分仍未知」
+> Slide 2 Title: Possible interactions far outnumber what we can measure
+> Visual: generalize the same diagram to a "many-to-many" view, marking the ratio of measured vs. unmeasured
+> Text: one redundant phrase, e.g., "Most remain unknown"
 
-### 例 2：论文结果表 → 结论 + 精简图
+### Example 2: Paper Results Table → Conclusion + Simplified Figure
 
-**改写前**：标题「Results」，一张 8 列 × 12 行的对比表，字号 10pt。
-**改写后**：标题「我们的方法在 4 个基准上都持平或更好」；柱状图只保留我们的方法和最强的 2 个基线；我们的方法用强调色，其余用灰色；完整表格放备份页并在这页加跳转。
+**Before**: title "Results," an 8-column × 12-row comparison table, 10 pt font.
+**After**: title "Our method matches or outperforms on all 4 benchmarks"; bar chart keeping only our method and the top 2 baselines; our method in the accent color, the rest in gray; full table on a backup slide with a link from this slide.
 
-### 例 3：长句压缩成路标
+### Example 3: Long Sentences Compressed into Signposts
 
-| 原句 | 屏幕文字 |
+| Original sentence | On-screen text |
 |---|---|
-| 本次报告的目的是向大家介绍社交媒体对青少年心理健康的正面和负面影响 | 社交媒体如何影响青少年心理健康 |
-| 新的营销策略将重点扩大社交媒体影响力，通过社交平台触达更年轻的群体 | 用社交媒体触达年轻用户 |
-| 光合作用是植物把阳光转化为能量的过程，对植物生长至关重要 | 植物靠光合作用生长 |
+| The purpose of this talk is to introduce the positive and negative effects of social media on adolescent mental health | How social media affects adolescent mental health |
+| The new marketing strategy will focus on expanding social media influence to reach younger audiences through social platforms | Use social media to reach young users |
+| Photosynthesis is the process by which plants convert sunlight into energy, and it is essential for plant growth | Plants grow through photosynthesis |
 
-## 智能体常见失败模式
+## Common Agent Failure Modes
 
-| 失败模式 | 对策 |
+| Failure mode | Countermeasure |
 |---|---|
-| 按论文章节逐段压缩成要点 | 先做 brief 和 storyline；按观点组织，而不是按章节 |
-| 标题用 Introduction / Method / Results | 内容页一律用结论句（S2）；只有 \`[section]\` 页可用话题 |
-| 每页 5–8 条要点 | 数元素（S5）；换成一个视觉中心（S7） |
-| 直接贴论文的多面板图 | 拆面板、放大字号、高亮重点，见 \`figures.md\` |
-| 编造数字或引用填空 | 留 \`【待补：…】\` 占位符并告诉用户 |
-| 不看渲染结果就交付 | 第 5 步 \`--render\` 后逐页看图 |
+| Compressing each paper section into bullet points | Write the brief and storyline first; organize by point, not by section |
+| Titles use Introduction / Method / Results | All content slides must use conclusion sentences (S2); only `[section]` slides may use topic-style titles |
+| 5–8 bullet points per slide | Count elements (S5); replace with one visual anchor (S7) |
+| Pasting multi-panel figures directly from the paper | Split panels, enlarge fonts, highlight key points; see `figures.md` |
+| Fabricating numbers or citations to fill gaps | Leave a `[TODO: …]` placeholder and tell the user |
+| Delivering without checking the rendered output | Step 5: review every slide after `--render` |

@@ -1,43 +1,43 @@
 {
-  "skill_name": "学术研究演示幻灯片",
+  "skill_name": "Research Presentation Slides",
   "evals": [
     {
       "id": 1,
-      "prompt": "这是我的论文 PDF，帮我做一个 15 分钟的会议报告 slides，用 Beamer。",
-      "expected_output": "先产出 talk-brief.md 与 storyline.md（结论句标题、按观点而非章节组织），lint 通过后再生成 Beamer 源文件；编译导出 PDF 并运行 check_deck_pdf.py 和逐页看图；有备份页；最后一页主内容是结论页；缺失数字用占位符。",
+      "prompt": "This is my paper PDF. Help me make a 15-minute conference talk slides using Beamer.",
+      "expected_output": "First produce talk-brief.md and storyline.md (conclusion-sentence titles, organized by points rather than sections), pass lint, then generate Beamer source files; compile and export PDF and run check_deck_pdf.py and inspect page-by-page; include backup pages; last main page is a conclusion page; use placeholders for missing numbers.",
       "files": [],
       "assertions": [
-        "storyline.md 存在且 lint_storyline.py 无 ERROR",
-        "内容页标题全部为结论句，无 引言/方法/结果 等话题式标题",
-        "主线逻辑页数在 5–18 之间",
-        "存在 [backup] 页",
-        "最后一页主内容不是 谢谢/提问",
-        "运行过 check_deck_pdf.py 且无 ERROR",
-        "未出现论文中不存在的数字或引用"
+        "storyline.md exists and lint_storyline.py has no ERROR",
+        "All content page titles are conclusion sentences, no topic-style titles like Introduction/Method/Results",
+        "Main logical slide count is between 5-18",
+        "[backup] pages exist",
+        "Last main content page is not Thank you/Questions",
+        "check_deck_pdf.py was run and has no ERROR",
+        "No numbers or citations not present in the paper appear"
       ]
     },
     {
       "id": 2,
-      "prompt": "帮我看看这份组会 PPT 哪里不好（附 deck.pdf），下周要讲 20 分钟。",
-      "expected_output": "运行 check_deck_pdf.py，反推 storyline 并 lint，输出带 review-checklist 编号、按严重度排序的问题清单，结构问题优先；给出具体改写建议（如结论句标题示例）。",
+      "prompt": "Review this group-meeting PPT (attached deck.pdf) for me -- I'm presenting for 20 minutes next week.",
+      "expected_output": "Run check_deck_pdf.py, reverse-engineer storyline and lint, output an issue list with review-checklist IDs and severity, structural issues first; give concrete rewrite suggestions (e.g. conclusion-sentence title examples).",
       "files": ["evals/files/group-meeting-deck.pdf"],
       "assertions": [
-        "评审意见引用了检查清单编号（如 S2、T6）",
-        "问题按 高/中/低 分组，结构问题排在视觉问题前面",
-        "至少给出一个具体的结论句标题改写",
-        "提到了组会场合的必有页（需要大家决定的问题 / 下一步）"
+        "Review comments reference checklist IDs (e.g. S2, T6)",
+        "Issues are grouped by High/Medium/Low, structural issues ranked before visual issues",
+        "At least one concrete conclusion-sentence title rewrite is provided",
+        "Mentions must-have pages for a group-meeting context (issues requiring group decision / next steps)"
       ]
     },
     {
       "id": 3,
-      "prompt": "我们组做了一个开源的向量数据库，想做一个 5 分钟的 lightning talk 介绍它，听众是开发者。README 在仓库里。用 Marp 做。",
-      "expected_output": "按 talk-types.md 的 lightning 配比：一句话问题、一个核心结果图、联系方式/二维码；页数少；不讲实现细节；视觉中心明确。",
+      "prompt": "Our team built an open-source vector database and wants a 5-minute lightning talk to introduce it, audience is developers. README is in the repo. Use Marp.",
+      "expected_output": "Follow talk-types.md lightning ratio: one-sentence problem, one core result figure, contact info/QR code; few pages; no implementation details; clear visual center.",
       "files": [],
       "assertions": [
-        "talk-brief 中场合为 lightning，时长 5 分钟",
-        "主线逻辑页数 ≤ 8",
-        "没有方法细节页或架构细节堆砌",
-        "结尾页包含核心信息和获取方式（链接或二维码占位）"
+        "talk-brief lists occasion as lightning, duration 5 minutes",
+        "Main logical slide count <= 8",
+        "No method detail pages or architecture detail dumps",
+        "Closing page contains core message and how to get it (link or QR code placeholder)"
       ]
     }
   ]

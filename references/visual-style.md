@@ -1,50 +1,50 @@
-# 视觉风格：可读性、可访问性、一致性
+# Visual Style: Readability, Accessibility, Consistency
 
-第 4 步的细则。对应评审清单中的 \`V*\` 条目。这里只讲与工具无关的标准，不讲具体工具的设置方法。
+Details for Step 4. Corresponds to the `V*` items in the review checklist. This section covers only tool-agnostic standards, not tool-specific setup instructions.
 
-## V1 字号
+## V1 Font Size
 
-- 正文不小于约 24pt（以 16:9、高 7.5 英寸的页面为基准；其他页面尺寸按比例换算，\`check_deck_pdf.py\` 会自动换算）。
-- 引用、页脚可以更小，但不应小于约 12pt。
-- 粗检方法：把 slides 打印出来放在地上，站着能不能读清？笔记本屏幕上看着「刚好」的字，投影到后排往往太小。
+- Body text no smaller than approximately 24 pt (based on a 16:9 page 7.5 inches tall; other sizes scale proportionally, and `check_deck_pdf.py` will convert automatically).
+- Citations and footers can be smaller, but not below approximately 12 pt.
+- Quick check: print the slides and place them on the floor—can you read them while standing? Text that looks "just right" on a laptop screen is often too small when projected to the back row.
 
-## V2 对比度与背景
+## V2 Contrast and Background
 
-- 高对比：深色字配浅色背景，或反过来。浅灰字配白底、深色图表配深色背景都是常见事故。
-- 背景简单，不用照片或渐变当正文背景。
-- 线上报告和小屏幕上，对比度问题会更严重。
+- High contrast: dark text on a light background, or vice versa. Light-gray text on a white background or dark charts on a dark background are common accidents.
+- Keep the background simple; do not use photos or gradients as the background for body text.
+- Contrast problems are worse for online talks and on small screens.
 
-## V3 字体
+## V3 Typeface
 
-- 投影上优先用无衬线字体；全篇不超过 2 种字体（标题一种，正文一种，代码可以另加一种等宽字体）。
-- 强调用加粗或颜色，不用斜体、下划线和全大写，这三种对阅读障碍者和远距离阅读都不友好。
-- 使用常见字体或把字体嵌入文件，避免换电脑后排版错乱。
+- Prefer sans-serif fonts for projection; use no more than 2 typefaces throughout (one for headings, one for body text; code may use an additional monospace font).
+- Use bold or color for emphasis; avoid italics, underlining, and ALL CAPS—these three are unfriendly to readers with dyslexia and to distant viewing.
+- Use common fonts or embed fonts in the file to avoid layout breakage when opening on another computer.
 
-## V4 颜色
+## V4 Color
 
-- 一个中性色（文字）+ 一个强调色，再加一两个辅助色就够了。
-- 颜色有含义时，全篇保持一致。
-- 使用色盲友好配色，不要只靠颜色传达信息。可以用色盲模拟工具检查。
+- One neutral color (text) + one accent color, plus one or two auxiliary colors, is enough.
+- When colors carry meaning, keep them consistent throughout.
+- Use color-blind-friendly palettes; do not rely on color alone to convey information. Check with a color-blindness simulator.
 
-## V5 留白与对齐
+## V5 White Space and Alignment
 
-- 留白是设计的一部分。东西放不下时，说明内容太多，而不是边距太大。
-- 元素对齐到统一的网格或边距；同类元素（标题、图、引用）在每页的位置保持一致。
+- White space is part of the design. When things do not fit, it means there is too much content, not that the margins are too large.
+- Align elements to a uniform grid or margin; keep the same kind of element (title, figure, citation) in the same position on every slide.
 
-## V6 模板
+## V6 Template
 
-- 选最素的模板，或者去掉模板里的装饰条、大 logo、花哨页脚。它们都在占用观众的注意力。
-- 保留有用的部分：页码、简短的报告标题或章节名。
+- Choose the plainest template, or remove decorative bars, large logos, and fancy footers from the template. They all consume the audience's attention.
+- Keep the useful parts: page numbers, a short talk title or section name.
 
-## V7 一致性
+## V7 Consistency
 
-- **术语**：一个概念从头到尾只用一个名字。前面叫 agent、后面叫 actor、再后面叫 policy，观众会以为是三个东西。
-- **符号**：遵循领域惯例，全篇一致。
-- **样式**：标题位置、字号、颜色含义、引用格式、图的风格全篇一致。
-- **页码**：加上，方便 Q&A 时观众说「第 12 页那张图」。
+- **Terminology**: use one and only one name for a concept from start to finish. If you call it agent at first, then actor, then policy, the audience will think they are three different things.
+- **Notation**: follow field conventions and keep them consistent throughout.
+- **Style**: title position, font size, color meaning, citation format, and figure style should be consistent throughout.
+- **Page numbers**: add them, so that during Q&A an audience member can say "the figure on slide 12."
 
-## V8 可访问性补充
+## V8 Accessibility Add-ons
 
-- 动画会增加视觉障碍者的处理负担：尽量不用。
-- 线上报告时，可以用自动字幕练习，检查语速、音量和发音。
-- 图片里有关键信息时，口头描述出来。
+- Animations increase the processing burden for people with visual impairments: avoid them when possible.
+- For online talks, practice with automatic captions to check speaking rate, volume, and pronunciation.
+- When an image contains key information, describe it orally.

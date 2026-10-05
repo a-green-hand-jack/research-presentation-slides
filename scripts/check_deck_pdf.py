@@ -1,25 +1,25 @@
 #!/usr/bin/env python3
-"""检查导出的幻灯片 PDF（任何工具：PowerPoint、Keynote、Beamer、Marp 等）。
+"""Check exported slide PDFs (any tool: PowerPoint, Keynote, Beamer, Marp, etc.).
 
-检查项（编号对应 references/review-checklist.md）：
-  T7  幻灯片数量与时长匹配（连续相同标题的页面视为一张幻灯片，因此
-      Beamer 的覆盖层 / 逐步显示不会被重复计数）
-  V1  字号，归一化到 7.5 英寸（540pt）高的幻灯片；任何位置的极小文字、
-      正文区域的小文字
-  S6  每页字数
-  S7  纯文字页（无图片且几乎没有矢量图形）
-  V5  内容超出页面边界
-  V3  不同字体族的数量
-  V7  页码是否存在
-  S2  内容页使用话题式标题（如「Results」「Method」）
-  T6  幻灯片以「Thank you / Questions」页结尾
+Checks (numbers correspond to references/review-checklist.md):
+  T7  Slide count matches duration (consecutive identical titles count as one slide,
+      so Beamer overlays / stepwise reveals are not double-counted)
+  V1  Font size, normalized to a 7.5-inch (540 pt) tall slide; tiny text anywhere,
+      small text in body areas
+  S6  Words per slide
+  S7  Text-only pages (no images and almost no vector graphics)
+  V5  Content overflowing page boundaries
+  V3  Number of distinct font families
+  V7  Page numbers present
+  S2  Content pages using topic-style titles (e.g. "Results", "Method")
+  T6  Slides end with a "Thank you / Questions" page
 
-依赖：pdfplumber（pip install pdfplumber）。--render 还需要 pypdfium2。
+Requires: pdfplumber (pip install pdfplumber). --render also needs pypdfium2.
 
-用法：
+Usage:
   python check_deck_pdf.py deck.pdf --duration 15 [--backup-start 18]
                            [--render pages/] [--json]
-退出码：如有任何 ERROR 则为 1，否则为 0。
+Exit code: 1 if any ERROR, otherwise 0.
 """
 import argparse
 import json
@@ -31,17 +31,17 @@ from collections import Counter
 try:
     import pdfplumber
 except ImportError:
-    sys.exit("需要 pdfplumber：pip install pdfplumber")
+    sys.exit("Requires pdfplumber: pip install pdfplumber")
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lint_storyline import is_topic_title, CLOSING_RE  # noqa: E402
 
-REF_HEIGHT = 540.0          # 7.5 英寸幻灯片高度，单位为 pt
-TINY_PT = 12.0              # 小于此字号投影时无法阅读
-BODY_MIN_PT = 18.0          # 正文小于此字号会触发警告
-FOOTER_FRAC = 0.10          # 顶部/底部 10% 为页眉/页脚区域
-MAX_WORDS = 50              # 每页字数上限（CJK 字符按 0.5 词计），超过则警告
-HARD_MAX_WORDS = 90         # 每页字数硬上限
+REF_HEIGHT = 540.0          # 7.5-inch slide height in pt
+TINY_PT = 12.0              # Text smaller than this is unreadable when projected
+BODY_MIN_PT = 18.0          # Body text smaller than this triggers a warning
+FOOTER_FRAC = 0.10          # Top/bottom 10% are header/footer zones
+MAX_WORDS = 50              # Per-slide word limit (CJK chars count as 0.5 words); warn if exceeded
+HARD_MAX_WORDS = 90         # Hard per-slide word limit
 CJK_RE = re.compile(r"[\u3400-\u9fff\uf900-\ufaff\u3040-\u30ff\uac00-\ud7af]")
 
 
@@ -52,13 +52,13 @@ def word_count(text):
 
 
 def font_family(name):
-    name = name.split("+")[-1]                 # 去掉子集前缀 ABCDEF+
+    name = name.split("+")[-1]                 # Strip subset prefix ABCDEF+
     name = re.split(r"[-,]", name)[0]
     return re.sub(r"(Bold|Italic|Oblique|Regular|Medium|Light|Semibold|MT|PS)+$", "", name) or name
 
 
 def page_title(page, scale):
-    """页面顶部 30% 区域内字号最大的那一行文字。"""
+    """Largest text line in the top 30% of the page."""
     h = page.height
     try:
         words = page.extract_words(extra_attrs=["size"], keep_blank_chars=False)
@@ -101,12 +101,12 @@ def analyze(path, duration, backup_start):
             for c in chars:
                 fonts[font_family(c.get("fontname", "?"))] += 1
 
-            # V5 溢出检测
+            # V5 overflow detection
             out = [c for c in chars if c["x1"] > w + 1 or c["x0"] < -1 or c["bottom"] > h + 1 or c["top"] < -1]
             if out:
-                add("ERROR", "V5", f"{len(out)} 个字符超出页面边界：「{''.join(c['text'] for c in out[:20])}」", i)
+                add("ERROR", "V5", f"{len(out)} characters overflow page boundary: {''.join(c['text'] for c in out[:20])}", i)
 
-            # V1 字号检查
+            # V1 font size check
             if chars:
                 sizes = [c["size"] * scale for c in chars]
                 tiny = [c for c, s in zip(chars, sizes) if s < TINY_PT - 0.5]
@@ -116,31 +116,31 @@ def analyze(path, duration, backup_start):
                 if tiny and len(tiny) > 3:
                     sample = "".join(c["text"] for c in tiny[:25])
                     add("WARN" if is_backup else "ERROR", "V1",
-                        f"{len(tiny)} 个字符小于 {TINY_PT:g}pt 等效（最小 {min(sizes):.1f}pt），投影不可读：「{sample}」", i)
+                        f"{len(tiny)} characters smaller than {TINY_PT:g}pt equivalent (min {min(sizes):.1f}pt), unreadable when projected: {sample}", i)
                 frac = len(body) / len(chars)
                 if frac > 0.25 and not is_backup:
-                    add("WARN", "V1", f"{frac:.0%} 的正文区文字小于 {BODY_MIN_PT:g}pt 等效（图中文字也算）", i)
+                    add("WARN", "V1", f"{frac:.0%} of body-area text is smaller than {BODY_MIN_PT:g}pt equivalent (text inside figures also counts)", i)
 
-            # S2 话题式标题（启发式：顶部 30% 内字号最大的文字）
+            # S2 topic-style title (heuristic: largest text in top 30%)
             if (not is_backup and i > 1 and info["title"] and is_topic_title(info["title"])
                     and not CLOSING_RE.match(info["title"])):
-                add("WARN", "S2", f"标题「{info['title']}」像话题；内容页请用结论句（章节分隔页可忽略）", i)
+                add("WARN", "S2", f"Title \"{info['title']}\" looks like a topic; content pages should use conclusion sentences (section dividers may be ignored)", i)
 
-            # S6 字数
+            # S6 word count
             if not is_backup:
                 if info["words"] > HARD_MAX_WORDS:
-                    add("ERROR", "S6", f"约 {info['words']:.0f} 词，文字墙 → 拆页或把文字移到演讲者备注", i)
+                    add("ERROR", "S6", f"~{info['words']:.0f} words, wall of text -> split page or move text to speaker notes", i)
                 elif info["words"] > MAX_WORDS:
-                    add("WARN", "S6", f"约 {info['words']:.0f} 词，偏多", i)
+                    add("WARN", "S6", f"~{info['words']:.0f} words, on the high side", i)
 
-            # S7 纯文字页
+            # S7 text-only page
             graphics = len(page.images) + len(page.curves) + len([r for r in page.rects
                          if (r["x1"] - r["x0"]) < w * 0.95 or (r["bottom"] - r["top"]) < h * 0.95])
             info["graphics"] = graphics
             if not is_backup and i > 1 and graphics < 3 and info["words"] > 15:
-                add("WARN", "S7", "疑似纯文字页：没有图片或图形 → 考虑加一个视觉中心", i)
+                add("WARN", "S7", "Suspected text-only page: no images or graphics -> consider adding a visual center", i)
 
-        # V7 页码
+        # V7 page numbers
         numbered = 0
         for i, page in enumerate(pdf.pages, start=1):
             h = page.height
@@ -149,14 +149,14 @@ def analyze(path, duration, backup_start):
             if re.search(rf"(?<!\d){i}(?!\d)", txt):
                 numbered += 1
         if n >= 5 and numbered < n * 0.5:
-            add("WARN", "V7", f"只有 {numbered}/{n} 页检测到页码；加上页码方便 Q&A 时引用")
+            add("WARN", "V7", f"Only {numbered}/{n} pages detected with page numbers; add page numbers for easier Q&A referencing")
 
-    # V3 字体族
+    # V3 font families
     fam = [f for f, k in fonts.items() if k > 20]
     if len(fam) > 4:
-        add("WARN", "V3", f"使用了 {len(fam)} 种字体族（{', '.join(fam[:8])}），建议 ≤ 3")
+        add("WARN", "V3", f"Used {len(fam)} font families ({', '.join(fam[:8])}), recommend <= 3")
 
-    # T7 页数，合并逐步揭示（连续相同标题）
+    # T7 page count, merging stepwise reveals (consecutive identical titles)
     main = [p for p in pages_info if backup_start is None or p["page"] < backup_start]
     logical = 0
     prev = None
@@ -165,7 +165,7 @@ def analyze(path, duration, backup_start):
             logical += 1
         prev = p["title"]
     if main and main[-1]["title"] and CLOSING_RE.match(main[-1]["title"]):
-        add("WARN", "T6", f"主线最后一页是「{main[-1]['title']}」；Q&A 时屏幕会停在这页 → 以结论页收尾",
+        add("WARN", "T6", f"Last main page is \"{main[-1]['title']}\"; screen will stop here during Q&A -> end with a conclusion page",
             main[-1]["page"])
     summary = {"pages": len(pages_info), "main_pages": len(main), "logical_slides": logical,
                "backup_pages": len(pages_info) - len(main)}
@@ -173,11 +173,11 @@ def analyze(path, duration, backup_start):
         lo, hi = duration / 3.0, duration * 1.2
         if logical > hi:
             add("ERROR" if logical > duration * 1.6 else "WARN", "T7",
-                f"{logical} 张逻辑页（已合并逐步揭示）对 {duration:g} 分钟偏多；经验范围约 {lo:.0f}–{hi:.0f}")
+                f"{logical} logical slides (stepwise reveals merged) for {duration:g} min is high; empirical range ~{lo:.0f}-{hi:.0f}")
         elif logical < lo:
-            add("WARN", "T7", f"{logical} 张逻辑页对 {duration:g} 分钟偏少；确认每页不是太满")
+            add("WARN", "T7", f"{logical} logical slides for {duration:g} min is low; confirm each page isn't overloaded")
     if backup_start is None:
-        add("INFO", "T9", "未指定 --backup-start；如果有备份页，请指定，否则会被计入时长和字数检查")
+        add("INFO", "T9", "--backup-start not specified; if there are backup pages, please specify, otherwise they will be counted in duration and word checks")
     return issues, pages_info, summary
 
 
@@ -185,7 +185,7 @@ def render(path, outdir, scale=1.0):
     try:
         import pypdfium2 as pdfium
     except ImportError:
-        print("跳过渲染：需要 pypdfium2（pip install pypdfium2）", file=sys.stderr)
+        print("Skipping render: requires pypdfium2 (pip install pypdfium2)", file=sys.stderr)
         return []
     os.makedirs(outdir, exist_ok=True)
     doc = pdfium.PdfDocument(path)
@@ -203,9 +203,9 @@ def render(path, outdir, scale=1.0):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("pdf")
-    ap.add_argument("--duration", type=float, help="时长（分钟，不含 Q&A）")
-    ap.add_argument("--backup-start", type=int, help="第一页备份页的页码（之后的页不计入时长，检查放宽）")
-    ap.add_argument("--render", metavar="DIR", help="把每页渲染成 PNG 以便逐页看图")
+    ap.add_argument("--duration", type=float, help="Duration in minutes (excluding Q&A)")
+    ap.add_argument("--backup-start", type=int, help="Page number of the first backup page (pages after this are excluded from duration checks and relaxed)")
+    ap.add_argument("--render", metavar="DIR", help="Render each page as PNG for visual page-by-page inspection")
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args()
 
@@ -217,15 +217,15 @@ def main():
         print(json.dumps({"summary": summary, "issues": issues, "pages": pages,
                           "rendered": rendered}, ensure_ascii=False, indent=2))
     else:
-        print(f"{a.pdf}: {summary['pages']} 页（主线 {summary['main_pages']}，"
-              f"合并逐步揭示后 {summary['logical_slides']} 张逻辑页；备份 {summary['backup_pages']}）\n")
+        print(f"{a.pdf}: {summary['pages']} pages ({summary['main_pages']} main, "
+              f"{summary['logical_slides']} logical after merging stepwise reveals; {summary['backup_pages']} backup)\n")
         order = {"ERROR": 0, "WARN": 1, "INFO": 2}
         for i in sorted(issues, key=lambda x: (order[x["level"]], x["page"] or 0)):
-            where = f"第 {i['page']} 页 " if i["page"] else ""
+            where = f"page {i['page']} " if i["page"] else ""
             print(f"{i['level']:5} [{i['check']}] {where}{i['msg']}")
-        print(f"\n{n_err} 个错误, {sum(i['level'] == 'WARN' for i in issues)} 个警告")
+        print(f"\n{n_err} errors, {sum(i['level'] == 'WARN' for i in issues)} warnings")
         if rendered:
-            print(f"\n已渲染 {len(rendered)} 页到 {a.render}/ ——逐页看图，检查重叠、截断、模糊、对比度和对齐。")
+            print(f"\nRendered {len(rendered)} pages to {a.render}/ -- inspect page-by-page for overlap, clipping, blur, contrast, and alignment.")
     sys.exit(1 if n_err else 0)
 
 

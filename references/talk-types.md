@@ -1,45 +1,45 @@
-# 报告类型：不同场合的取舍
+# Talk Types: Trade-offs for Different Occasions
 
-每一节的格式相同：目的 / 时长配比 / 必有页 / 常见错误。新增场合时请沿用这个格式。时长配比只是起点，要按 talk brief 调整。
+Each section follows the same format: purpose / time allocation / must-have slides / common mistakes. When adding new occasions, follow this format. Time allocations are only a starting point; adjust according to the talk brief.
 
-## 会议短报告（10–20 分钟）
+## Conference Short Talk (10–20 min)
 
-- **目的**：让同行记住一个结论，并愿意读论文或找你聊。
-- **时长配比**：开场 + 贡献 ≈ 20%，方法 ≈ 25%，结果 ≈ 40%，讨论 + 结论 ≈ 15%。
-- **必有页**：结论句形式的贡献预告；2–3 个结果页；结论页（附论文链接或二维码）。
-- **常见错误**：照搬论文全部章节；讲太多实验设置；放完整对比表；最后一页只有「Thank you」。
+- **Purpose**: get peers to remember one conclusion and want to read the paper or talk to you.
+- **Time allocation**: opening + contribution ≈ 20%, methods ≈ 25%, results ≈ 40%, discussion + conclusion ≈ 15%.
+- **Must-have slides**: contribution preview in conclusion-sentence form; 2–3 results slides; conclusion slide (with paper link or QR code).
+- **Common mistakes**: copying all paper sections verbatim; too much experimental setup; full comparison tables; last slide saying only "Thank you".
 
-## 组会 / 进展汇报（10–30 分钟）
+## Group Meeting / Progress Report (10–30 min)
 
-- **目的**：同步进展，并**拿到决策或反馈**。
-- **时长配比**：上次结论与本次问题 ≈ 10%，新结果 ≈ 50%，问题 / 卡点 ≈ 25%，下一步与需要的决定 ≈ 15%。
-- **必有页**：「上次说到哪」一页；「我需要大家帮我决定 / 回答的问题」一页；下一步计划。
-- **常见错误**：按时间顺序流水账；只报好消息；没有明确提出要讨论的问题。
+- **Purpose**: sync progress and **obtain decisions or feedback**.
+- **Time allocation**: last conclusion + this time's problems ≈ 10%, new results ≈ 50%, problems / blockers ≈ 25%, next steps + decisions needed ≈ 15%.
+- **Must-have slides**: a "where we left off" slide; a "questions I need you to help decide / answer" slide; next-step plan.
+- **Common mistakes**: chronological laundry list; only reporting good news; not explicitly raising questions for discussion.
 
-## 答辩 / 资格考试（30–60 分钟）
+## Defense / Qualifying Exam (30–60 min)
 
-- **目的**：证明你独立完成了有分量的工作，并清楚自己的贡献边界。
-- **时长配比**：动机与问题 ≈ 15%，各项工作 ≈ 65%（每项工作一个小沙漏），综合与贡献 ≈ 10%，局限与未来 ≈ 10%。
-- **必有页**：贡献总览（之后多次回到这页标出当前位置）；每部分的署名（哪些是你做的）；局限；大量备份页。
-- **常见错误**：把论文每章都塞进来；面对委员把细节放在主页面上（他们会追着细节问）；回避局限。
+- **Purpose**: demonstrate that you independently completed substantial work and clearly understand the boundaries of your contribution.
+- **Time allocation**: motivation & problem ≈ 15%, individual works ≈ 65% (each work is a small hourglass), synthesis & contribution ≈ 10%, limitations & future ≈ 10%.
+- **Must-have slides**: contribution overview (return to this slide multiple times later to mark current position); attribution for each part (which parts you did); limitations; many backup slides.
+- **Common mistakes**: cramming in every chapter of the thesis; putting details on main slides in front of the committee (they will chase the details); avoiding limitations.
 
-## 求职报告 / 求职演讲（45–60 分钟）
+## Job Talk / Faculty Application Talk (45–60 min)
 
-- **目的**：展示一条清晰的研究主线，以及你未来能做什么。
-- **时长配比**：研究愿景 ≈ 10%，代表性工作 1–2 项深讲 ≈ 60%，其他工作简述 ≈ 10%，未来研究计划 ≈ 15%，总结 ≈ 5%。
-- **必有页**：研究愿景；深讲工作的完整论证；未来计划（具体到项目）。
-- **常见错误**：每项工作都浅浅讲一遍；没有主线；未来计划空泛。
+- **Purpose**: demonstrate a clear research thread and what you can do in the future.
+- **Time allocation**: research vision ≈ 10%, deep dive into 1–2 representative works ≈ 60%, brief overview of other works ≈ 10%, future research plan ≈ 15%, summary ≈ 5%.
+- **Must-have slides**: research vision; complete argument for the deep-dive works; future plan (specific to projects).
+- **Common mistakes**: giving every work a shallow treatment; no unifying thread; vague future plans.
 
-## 闪电演讲 / PechaKucha（3–7 分钟，可能自动翻页）
+## Lightning Talk / PechaKucha (3–7 min, possibly auto-advancing)
 
-- **目的**：让人记住你是谁、做了什么、为什么值得来找你聊。
-- **时长配比**：问题 ≈ 25%，一个核心结果 ≈ 50%，结论与联系方式 ≈ 25%。
-- **必有页**：一句话问题；一张核心图；联系方式或二维码。
-- **常见错误**：试图讲方法细节；页面需要仔细看才能懂（自动翻页时，最多允许一页需要观众花时间看）；没讲完就被翻走。
+- **Purpose**: get people to remember who you are, what you did, and why you are worth talking to.
+- **Time allocation**: problem ≈ 25%, one core result ≈ 50%, conclusion & contact info ≈ 25%.
+- **Must-have slides**: one-sentence problem; one core figure; contact info or QR code.
+- **Common mistakes**: trying to explain method details; slides that require careful reading (with auto-advancing, allow at most one slide that demands the audience's time); getting cut off before finishing.
 
-## 面向非专业听众（科普、跨部门、管理层）
+## Non-Specialist Audience (outreach, cross-department, management)
 
-- **目的**：让人理解这件事为什么重要，以及结论是什么。
-- **时长配比**：问题与影响 ≈ 40%，直观解释 ≈ 30%，结果 ≈ 20%，下一步 ≈ 10%。
-- **必有页**：类比或直观示意；一个具体的例子或案例；用对方的语言讲影响。
-- **常见错误**：术语没有解释；用公式；用精确的统计量代替直观比较。
+- **Purpose**: get people to understand why this matters and what the conclusion is.
+- **Time allocation**: problem & impact ≈ 40%, intuitive explanation ≈ 30%, results ≈ 20%, next steps ≈ 10%.
+- **Must-have slides**: analogy or intuitive illustration; a concrete example or case study; impact framed in the audience's language.
+- **Common mistakes**: unexplained jargon; using formulas; using precise statistics instead of intuitive comparisons.

@@ -1,39 +1,39 @@
-# 幻灯片规格
+# Slide Spec
 
-<!-- 第 3 步产出。storyline.md 中的每一页对应一个区块。制作时按这里的规格做，不要临场加内容。 -->
+<!-- Step 3 output. Each page in storyline.md corresponds to one block. Follow these specs when building; do not improvise content. -->
 
-## 第 <N> 页 — [<标签>]
+## Page <N> — [<Tag>]
 
-- **标题（结论句）**：
-- **这页唯一要传达的观点**：<!-- 通常与标题相同；写不出来说明这页要拆 -->
-- **视觉中心**：<!-- 哪张图 / 示意图 / 关键数字放大 / 对比；来源文件路径 -->
-  - 需要修改原图吗：<!-- 拆面板、放大字号、高亮某条线、删多余系列 -->
-- **屏幕文字**（≤ 3 个短语，每个一行）：
+- **Title (conclusion sentence)**:
+- **Single message this page must convey**: <!-- usually same as the title; if you can't write it, this page needs to be split -->
+- **Visual center**: <!-- which figure / diagram / key number enlargement / comparison; source file path -->
+  - Does the original figure need editing: <!-- split panels, enlarge fonts, highlight a line, remove extra series -->
+- **On-screen text** (≤ 3 phrases, one per line):
   -
-- **元素计数**（标题 + 图 + 文本块 + 图标…，目标 ≤ 6）：
-- **构建方式**：<!-- 一次全出 / 分 k 步逐步揭示（各步内容） -->
-- **演讲者备注**（要说的话，2–5 句；先说屏幕上有什么，再解释，再延伸）：
-- **过渡句**（如何引到下一页）：
-- **来源 / 引用**：
-- **预计时长**：
-- **走神测试**：<!-- 没听讲的人看一眼能 get 到什么？ -->
+- **Element count** (title + figure + text blocks + icons…, target ≤ 6):
+- **Build** (reveal all at once / reveal in k steps (content of each step)):
+- **Speaker notes** (what to say, 2–5 sentences; first describe what's on screen, then explain, then extend):
+- **Transition** (how to lead to the next page):
+- **Source / citation**:
+- **Estimated duration**:
+- **Distraction test**: <!-- what can someone who zoned out grasp at a glance? -->
 
 ---
 
-<!-- 示例 -->
+<!-- Example -->
 
-## 第 7 页 — [result]
+## Page 7 — [result]
 
-- **标题（结论句）**：延迟随长度线性增长，64k 时快 2.1 倍
-- **这页唯一要传达的观点**：我们的方法在长上下文下延迟优势随长度增大
-- **视觉中心**：折线图，x = 上下文长度，y = 延迟；两条线（全注意力 灰色，我们的方法 橙色）；在 64k 处标注「2.1×」
-  - 需要修改原图吗：论文 Fig.4 有 5 条基线 → 只留全注意力；轴标签放大到投影可读；去掉图例，在曲线末端直接标注
-- **屏幕文字**：
-  - 64k：2.1× 更快
-- **元素计数**：标题、图、一处标注 = 3
-- **构建方式**：先只显示灰线（「这是全注意力」），再加橙线
-- **演讲者备注**：横轴是上下文长度，纵轴是单次请求延迟。灰线是全注意力，近似平方增长。橙线是我们的方法，基本是线性的。到 64k 时差距达到 2.1 倍，而且长度越长差距越大。
-- **过渡句**：那这个加速从哪里来？下一页拆开看。
-- **来源 / 引用**：本工作，实验设置见备份页 12
-- **预计时长**：2 分钟
-- **走神测试**：看到一条橙线明显低于灰线，加上「2.1× 更快」
+- **Title (conclusion sentence)**: Latency grows linearly with length; 2.1× faster at 64k
+- **Single message this page must convey**: Our method's latency advantage increases with context length
+- **Visual center**: Line chart, x = context length, y = latency; two lines (full-attention gray, our method orange); label "2.1×" at 64k
+  - Does the original figure need editing: Paper Fig.4 has 5 baselines → keep only full attention; enlarge axis labels to projection-readable; remove legend, label directly at curve ends
+- **On-screen text**:
+  - 64k: 2.1× faster
+- **Element count**: title, figure, one annotation = 3
+- **Build**: show gray line first ("this is full attention"), then add orange line
+- **Speaker notes**: The horizontal axis is context length, vertical axis is per-request latency. The gray line is full attention, roughly quadratic growth. The orange line is our method, basically linear. At 64k the gap reaches 2.1×, and the longer the sequence, the larger the gap.
+- **Transition**: Where does this speedup come from? Let's break it down on the next page.
+- **Source / citation**: This work; experimental setup see backup page 12
+- **Estimated duration**: 2 minutes
+- **Distraction test**: see an orange line clearly below a gray line, plus "2.1× faster"

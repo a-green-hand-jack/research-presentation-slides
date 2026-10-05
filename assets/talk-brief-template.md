@@ -1,34 +1,34 @@
-# 演讲简报
+# Talk Brief
 
-<!-- 第 1 步产出。每一项都要填；不知道的写「假设：…」。 -->
+<!-- Step 1 output. Every field must be filled; write "Assumption: ..." if unknown. -->
 
-## 场合
-- 类型：<!-- 会议报告 / 组会 / 答辩 / 求职演讲 / 闪电报告 / 内部分享 / … -->
-- 时长（分钟，不含 问答）：
-- 问答：<!-- 中途可问 / 结束后统一问 / 时长 -->
-- 展示方式：<!-- 大投影 / 会议室屏幕 / 线上共享屏幕 / 自动翻页 -->
-- 格式要求：<!-- 主办方模板、比例 16:9/4:3、页数限制、语言 -->
+## Occasion
+- Type: <!-- conference talk / group meeting / defense / job talk / lightning talk / internal sharing / … -->
+- Duration (minutes, excluding Q&A):
+- Q&A: <!-- questions allowed mid-talk / all at the end / duration -->
+- Presentation mode: <!-- large projection / conference room screen / online screen share / auto-advance -->
+- Format requirements: <!-- organizer template, aspect ratio 16:9/4:3, page limit, language -->
 
-## 听众
-- 是谁：<!-- 同行专家 / 相邻领域 / 混合 / 非专业 / 评委 -->
-- 已知的背景：
-- 他们为什么来、关心什么：
+## Audience
+- Who: <!-- peer experts / adjacent field / mixed / non-specialist / committee -->
+- Known background:
+- Why they came, what they care about:
 
-## 目的
-<!-- 听完之后，我希望观众「做什么 / 想什么 / 感受到什么」？
-     差：汇报进展。
-     好：让委员会相信方法已可行，同意我按计划进入第二阶段。 -->
+## Goal
+<!-- After listening, I want the audience to "do / think / feel what"?
+     Bad: report progress.
+     Good: convince the committee the method is ready and approve my Phase-II plan. -->
 
-## 一句话核心信息
-<!-- 一个完整的陈述句。观众只记住一件事时，应该是这句话。 -->
+## One-sentence core message
+<!-- A complete declarative sentence. If the audience remembers only one thing, it should be this sentence. -->
 
-## 2–4 个主要观点（支撑核心信息）
+## 2–4 key points (supporting the core message)
 1.
 2.
 3.
 
-## 明确不讲的内容
-<!-- 写下来，防止往回加 -->
+## Explicitly out of scope
+<!-- Write it down to prevent scope creep -->
 
-## 已有材料
-<!-- 论文、图、数据、代码、旧 slides 的位置；缺什么 -->
+## Existing materials
+<!-- Location of paper, figures, data, code, old slides; note what's missing -->

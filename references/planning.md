@@ -1,49 +1,49 @@
-# 规划：目的、听众、核心信息
+# Planning: Purpose, Audience, Core Message
 
-第 1 步的细则。在这一步不要打开任何幻灯片工具。
+Details for Step 1. Do not open any slide tool at this step.
 
-## 目的
+## Purpose
 
-问：听完之后，观众要**做什么、想什么、感受到什么**？好的目的以观众为中心，能用来判断内容的取舍。
+Ask: after listening, what should the audience **do, think, and feel**? A good purpose is audience-centered and can be used to judge what content to keep or cut.
 
-| 差 | 好 |
+| Poor | Good |
 |---|---|
-| 汇报一下进展 | 让导师同意我把第二个实验砍掉，集中做第一个方向 |
-| 介绍我的论文 | 让同行记住「平稳性假设是瓶颈」，并愿意试用我们的工具 |
-| 展示项目 | 让评委相信系统已经可用，值得进入下一轮 |
+| Report progress | Get my advisor to agree I should drop the second experiment and focus on the first direction |
+| Introduce my paper | Make peers remember that "stationarity is the bottleneck" and be willing to try our tool |
+| Present the project | Convince judges that the system is already usable and deserves to advance to the next round |
 
-## 听众
+## Audience
 
-需要弄清三件事：
-- 他们**为什么来**（被要求出席 / 对话题感兴趣 / 来评估你）。
-- 已有的**背景知识**：决定背景铺多少、细节放多深。
-- 他们的**兴趣和动机**：决定开场从哪个问题讲起。
+Three things to figure out:
+- **Why they are here** (required attendance / interested in the topic / here to evaluate you).
+- **Background knowledge** they already have: determines how much background to provide and how deep the details should go.
+- **Interests and motivations**: determines which question to open with.
 
-混合听众：开场和结论面向最外行的那部分人，方法细节面向专家，深层细节放备份页。
+Mixed audience: open and close for the least knowledgeable portion; method details for experts; deep details in backup slides.
 
-**不要高估听众。** 一次报告能消化的新东西很少，报告几乎不可能做得「太简单」。
+**Do not overestimate the audience.** A talk can only digest very few new things; it is almost impossible to make a presentation "too simple."
 
-## 一句话核心信息
+## One-Sentence Core Message
 
-- 必须是一个**完整的陈述句**，有主语和结论。
-- 观众只记住一件事时，应该是这句话。
-- 它会出现在开场（预告）、主体（每个主要观点都支撑它）、结尾（重申）。
+- Must be a **complete declarative sentence** with a subject and a conclusion.
+- If the audience remembers only one thing, it should be this sentence.
+- It appears in the opening (preview), the body (every main point supports it), and the closing (restatement).
 
-检验：报告结束后，观众能否
-1. 说出动机和核心想法？
-2. 记得论证的关键步骤？
-3. 用三句话复述这个报告？
+Test: after the talk, can the audience
+1. State the motivation and core idea?
+2. Recall the key steps of the argument?
+3. Retell the talk in three sentences?
 
-## 主要观点
+## Key Points
 
-列出 2–4 个支撑核心信息的观点。每个观点通常对应一组结果，也就是故事线里的一段。超过 4 个，说明这次报告想讲的东西太多。
+List 2–4 points that support the core message. Each point usually corresponds to a set of results, i.e., a segment of the storyline. More than 4 means the talk is trying to cover too much.
 
-## 约束
+## Constraints
 
-时长（不含 Q&A）、Q&A 方式、屏幕类型（大投影 / 小屏 / 线上）、主办方模板、页数或自动翻页要求、语言。
+Duration (excluding Q&A), Q&A format, screen type (large projection / small screen / online), host template, page count or auto-advance requirements, language.
 
-## 常见错误
+## Common Mistakes
 
-- 把「我做了哪些事」当成目的。听众关心的是结论和意义，不是工作量。
-- 核心信息写成一个话题（「基于 X 的 Y 研究」）。
-- 复用旧报告的 slides 时跳过这一步。听众和目的变了，取舍也要跟着变。
+- Treating "what I did" as the purpose. The audience cares about conclusions and significance, not workload.
+- Writing the core message as a topic ("Research on Y based on X").
+- Skipping this step when reusing slides from an old talk. Audience and purpose change, so the trade-offs must change too.

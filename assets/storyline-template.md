@@ -1,48 +1,48 @@
 ---
-core_message: 免训练的稀疏缓存能把长上下文推理延迟减半而几乎不损失精度
+core_message: Training-free sparse caching can halve long-context inference latency with almost no accuracy loss
 duration_min: 15
-audience: 同行专家
+audience: peer experts
 ---
 
-# 故事线
+# Storyline
 
-<!-- 下面是一个完整示例。使用时替换 frontmatter 和所有页面。 -->
+<!-- Below is a complete example. Replace frontmatter and all pages when using. -->
 
 <!--
-格式（scripts/lint_storyline.py 依赖此格式）：
-  <序号>. [<标签>] <结论句标题> (<分钟> 分钟)
-分钟可省略。不想被检查的说明文字写在 HTML 注释里。
+Format (scripts/lint_storyline.py depends on this format):
+  <number>. [<tag>] <conclusion-sentence title> (<minutes> min)
+Minutes are optional. Explanatory text that should not be linted goes in HTML comments.
 
-标签：
-  hook          开场：抓住观众的问题或现象
-  motivation    为什么重要
-  question      本工作要回答的具体问题
-  contribution  我们做了什么、发现了什么（结果预告一句）
-  outline       路线图（短报告可省略）
-  section       章节分隔页（只有这类页面允许用话题式标题）
-  method        方法 / 模型 / 系统
-  result        结果（每页一个结论）
-  discussion    与 2–3 篇最相关工作的对比、局限、意义
-  takeaway      结论：重申核心信息、回到大问题
-  future        未来工作
-  ack           致谢 / 署名
-  backup        备份页（放在主线之后，不计入时长）
+Tags:
+  hook          Opening: grab the audience with a problem or phenomenon
+  motivation    Why it matters
+  question      The specific question this work answers
+  contribution  What we did / found (one-sentence preview of results)
+  outline       Roadmap (may be omitted for short talks)
+  section       Section divider (only this page type may use a topic-style title)
+  method        Method / model / system
+  result        Result (one conclusion per page)
+  discussion    Comparison with 2–3 most related works, limitations, significance
+  takeaway      Conclusion: restate core message, return to the big question
+  future        Future work
+  ack           Acknowledgments / credits
+  backup        Backup pages (placed after the main line, not counted in duration)
 
-只读标题时，应该能读成一个连贯的故事。
+Reading only the titles should tell a coherent story.
 -->
 
-1. [hook] 长上下文推理的成本随长度平方增长，已成为部署瓶颈 (1 分钟)
-2. [question] 能否在不重新训练的情况下把注意力开销降到线性？ (1 分钟)
-3. [contribution] 我们的稀疏缓存把 64k 长度下的延迟减半，精度损失 <0.5% (1 分钟)
-4. [method] 大部分注意力集中在少量「锚点」token 上 (1.5 分钟)
-5. [method] 只缓存锚点 + 滑动窗口即可近似完整注意力 (2 分钟)
-6. [result] 在 4 个基准上精度与全注意力持平 (2 分钟)
-7. [result] 延迟随长度线性增长，64k 时快 2.1 倍 (2 分钟)
-8. [result] 收益主要来自锚点选择，而不是窗口大小 (1.5 分钟)
-9. [discussion] 与 A、B 相比，我们无需微调且支持任意模型 (1.5 分钟)
-10. [takeaway] 免训练的稀疏缓存让长上下文部署成本降低一半 (1.5 分钟)
+1. [hook] Long-context inference cost grows quadratically with length, becoming a deployment bottleneck (1 min)
+2. [question] Can attention overhead be reduced to linear without retraining? (1 min)
+3. [contribution] Our sparse caching halves latency at 64k length with <0.5% accuracy loss (1 min)
+4. [method] Most attention concentrates on a small number of "anchor" tokens (1.5 min)
+5. [method] Caching anchors + sliding window approximates full attention (2 min)
+6. [result] Accuracy matches full attention on 4 benchmarks (2 min)
+7. [result] Latency grows linearly with length, 2.1× faster at 64k (2 min)
+8. [result] Gains mainly come from anchor selection, not window size (1.5 min)
+9. [discussion] Compared with A and B, we require no fine-tuning and support any model (1.5 min)
+10. [takeaway] Training-free sparse caching reduces long-context deployment cost by half (1.5 min)
 
-<!-- 以下为备份页 -->
-11. [backup] 全部 12 个基准的完整结果表
-12. [backup] 锚点数量的消融实验
-13. [backup] 与相关工作的详细比较
+<!-- Backup pages below -->
+11. [backup] Full results table for all 12 benchmarks
+12. [backup] Ablation study on anchor count
+13. [backup] Detailed comparison with related work

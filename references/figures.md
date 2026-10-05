@@ -1,48 +1,48 @@
-# 图表：图和表
+# Figures and Tables: Images and Tables
 
-对应评审清单中的 \`F*\` 条目。论文里的图通常不能直接贴到 slides 上：论文图是给人近距离慢慢看的，slides 上的图是给人远距离、几十秒内看懂的。
+Corresponds to the `F*` items in the review checklist. Figures from papers usually cannot be pasted directly onto slides: paper figures are designed to be viewed up close and slowly, while slide figures must be understood from a distance within seconds.
 
-## 规则
+## Rules
 
-### F1 一图一信息，信息写在标题里
-每张图只传达一个信息，而这个信息就是这页的结论句标题。
+### F1 One figure, one message; the message goes in the title
+Each figure conveys only one message, and that message is the conclusion-sentence title of the slide.
 
-### F2 拆开多面板图
-论文里 (a)(b)(c)(d) 的多面板图，在 slides 上通常一页一个面板。
+### F2 Split multi-panel figures
+Multi-panel figures with (a)(b)(c)(d) from papers usually become one panel per slide.
 
-### F3 字要大
-坐标轴标签、刻度、标注的字号要比论文里大得多，在投影下可读。能用原始数据重新绘图时，就按 slides 的尺寸重画，而不是放大论文的图片。
+### F3 Text must be large
+Axis labels, ticks, and annotations must be much larger than in the paper, readable when projected. When raw data is available, redraw at slide dimensions rather than enlarging the paper image.
 
-### F4 少系列、高亮重点
-- 一张图里的曲线或系列尽量少（经验值：不超过 3 条）。
-- 你要讲的那条用强调色，其余用灰色。
-- 全篇固定颜色含义，例如「橙色 = 我们的方法」。
+### F4 Fewer series, highlight the point
+- Keep curves or series in a single figure to a minimum (rule of thumb: no more than 3).
+- Use an accent color for the series you are discussing; gray out the rest.
+- Fix color meanings globally, e.g., "orange = our method."
 
-### F5 直接标注
-在曲线末端或柱子旁直接写名字，不要让观众在图例和曲线之间来回对照。关键数值（例如「2.1×」）直接标在图上。
+### F5 Annotate directly
+Write names directly at the end of curves or next to bars; do not make the audience look back and forth between a legend and the curves. Key values (e.g., "2.1×") should be labeled directly on the figure.
 
-### F6 轴和单位
-轴必须有标签和单位。去掉不必要的网格线、边框、3D 效果和阴影。
+### F6 Axes and units
+Axes must have labels and units. Remove unnecessary gridlines, borders, 3D effects, and shadows.
 
-### F7 表格只留要讲的数字
-- 只保留你会讲到的行和列；完整表格放备份页。
-- 需要的数字远多于 10 个时，考虑改成图。
-- 你要强调的数字加粗或用强调色。
+### F7 Tables: keep only the numbers you will discuss
+- Retain only the rows and columns you will talk about; place the full table in backup slides.
+- If you need far more than 10 numbers, consider turning them into a figure.
+- Bold or accent the numbers you want to emphasize.
 
-### F8 先教观众怎么读图
-第一次展示一张数据图时，口头先说明：横轴是什么、纵轴是什么、每个点代表什么，然后再讲结论。
+### F8 Teach the audience how to read the figure first
+When showing a data figure for the first time, verbally explain what the horizontal axis is, what the vertical axis is, and what each point represents, before stating the conclusion.
 
-### F9 逐步展示复杂的图
-需要讲很久的图，先展示坐标轴和基线，再加上你的结果，或者分几页展示。
+### F9 Reveal complex figures step by step
+For figures that take a long time to explain, first show the axes and baseline, then add your result, or spread it across several slides.
 
-### F10 色盲友好
-不要只用红/绿区分系列；同时配合线型、标记形状或直接标注来区分。
+### F10 Colorblind-friendly
+Do not distinguish series with red/green alone; also use line styles, marker shapes, or direct annotations.
 
-## 从论文图到 slides 图的改造清单
+## Checklist: Adapting Paper Figures for Slides
 
-拿到一张论文图时，依次问：
-1. 这张图在这页要支持哪一句结论？
-2. 哪些面板 / 系列 / 行列与这句结论无关？→ 删掉或移到备份页。
-3. 字号在投影下可读吗？→ 重新绘图或放大。
-4. 观众应该先看哪里？→ 用颜色或标注引导。
-5. 一两分钟内能讲完吗？→ 讲不完就拆。
+When you receive a paper figure, ask in order:
+1. Which conclusion on this slide does this figure support?
+2. Which panels / series / rows and columns are irrelevant to that conclusion? → Delete or move to backup slides.
+3. Is the font size readable when projected? → Redraw or enlarge.
+4. Where should the audience look first? → Guide with color or annotations.
+5. Can it be explained in one to two minutes? → If not, split it.

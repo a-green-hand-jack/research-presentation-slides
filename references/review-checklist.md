@@ -1,103 +1,103 @@
-# 评审清单
+# Review Checklist
 
-第 6 步的评审清单，也是交付前的最终检查。
+Review checklist for Step 6 and the final check before delivery.
 
-- 写评审意见时引用条目编号，例如「第 7 页违反 S2、F3」。
-- **已有编号不要修改或复用**。新增条目在对应前缀下追加下一个编号；废弃的条目标记为「（已废弃）」，不要删除。
-- 「自动」一栏表示哪些可以由脚本检查：\`L\` = \`lint_storyline.py\`，\`P\` = \`check_deck_pdf.py\`，空白表示需要人工或 agent 看图判断。
-- 严重程度：**高** = 必须修；**中** = 应该修；**低** = 建议修。
+- When writing review comments, cite item IDs, e.g., "Page 7 violates S2, F3."
+- **Do not modify or reuse existing IDs.** Add new items under the corresponding prefix with the next available number; mark deprecated items as "(deprecated)"—do not delete them.
+- The "Auto" column indicates which checks can be performed by scripts: `L` = `lint_storyline.py`, `P` = `check_deck_pdf.py`, blank means it requires human or agent visual inspection.
+- Severity: **High** = must fix; **Medium** = should fix; **Low** = recommended to fix.
 
-## M — 目标（信息）
+## M — Objective (Message)
 
-| 编号 | 检查项 | 严重度 | 自动 |
+| ID | Check Item | Severity | Auto |
 |---|---|---|---|
-| M1 | 有一句完整陈述句形式的核心信息 | 高 | L |
-| M2 | 核心信息出现在开场（预告）和结尾（重申） | 高 | |
-| M3 | 2–4 个主要观点，每个都有结果支撑，并支撑核心信息 | 高 | |
-| M4 | 内容深度与听众背景匹配 | 中 | |
+| M1 | Core message is a complete declarative sentence | High | L |
+| M2 | Core message appears in the opening (preview) and closing (restatement) | High | |
+| M3 | 2–4 key points, each supported by results, and all support the core message | High | |
+| M4 | Content depth matches audience background | Medium | |
 
-## T — 结构
+## T — Structure
 
-| 编号 | 检查项 | 严重度 | 自动 |
+| ID | Check Item | Severity | Auto |
 |---|---|---|---|
-| T1 | 只读标题，从头到尾是一个连贯的故事 | 高 | |
-| T2 | 结果按观点分组，而不是按实验顺序 | 中 | |
-| T3 | 结果预告出现在前 25% 的页面中 | 中 | L |
-| T4 | 开场直接进入问题，没有领域发展史或长篇文献综述 | 中 | |
-| T5 | 与最相关的 2–3 篇工作的对比放在讨论部分 | 低 | |
-| T6 | 最后一页主内容是结论，不是「Thank you / Questions」 | 高 | L |
-| T7 | 页数与时长匹配 | 高 | L P |
-| T8 | 有可跳过页面的方案 | 低 | |
-| T9 | 有备份页 | 中 | L |
+| T1 | Reading titles alone forms a coherent story from start to finish | High | |
+| T2 | Results are grouped by point, not by experimental order | Medium | |
+| T3 | Results preview appears within the first 25% of slides | Medium | L |
+| T4 | Opening dives straight into the problem; no field history or long literature review | Medium | |
+| T5 | Comparison with the 2–3 most relevant works is placed in the discussion | Low | |
+| T6 | The last main slide is a conclusion, not "Thank you / Questions" | High | L |
+| T7 | Slide count matches duration | High | L P |
+| T8 | There is a plan for skippable slides | Low | |
+| T9 | Backup slides exist | Medium | L |
 
-## S — 单页（幻灯片）
+## S — Single Slide
 
-| 编号 | 检查项 | 严重度 | 自动 |
+| ID | Check Item | Severity | Auto |
 |---|---|---|---|
-| S1 | 一页一个观点 | 高 | |
-| S2 | 内容页标题是结论句，不是话题 | 高 | L |
-| S3 | 屏幕上的每样东西都会讲到 | 中 | |
-| S5 | 视觉元素约 ≤ 6 个 | 中 | |
-| S6 | 没有大段完整句子；每页字数少 | 高 | P |
-| S7 | 有视觉中心，不是纯文字页 | 中 | P |
-| S8 | 通过走神测试 | 中 | |
-| S9 | 主页面上没有不必要的推导 | 中 | |
-| S10 | 引用当页标注，格式一致；署名清楚 | 中 | |
-| S11 | 没有装饰性动画 | 低 | |
+| S1 | One point per slide | High | |
+| S2 | Content slide titles are conclusion sentences, not topics | High | L |
+| S3 | Every item on screen is discussed | Medium | |
+| S5 | Visual elements roughly ≤ 6 | Medium | |
+| S6 | No long complete sentences; few words per slide | High | P |
+| S7 | Has a visual center; not a text-only slide | Medium | P |
+| S8 | Passes the distraction test | Medium | |
+| S9 | No unnecessary derivations on the main slide | Medium | |
+| S10 | Citations annotated on the same slide, consistent format; attribution clear | Medium | |
+| S11 | No decorative animations | Low | |
 
-（S4「说的比屏幕上多」属于演讲环节，见 D1。）
+(S4 "Say more than what is on screen" belongs to the delivery phase; see D1.)
 
-## F — 图表
+## F — Figures
 
-| 编号 | 检查项 | 严重度 | 自动 |
+| ID | Check Item | Severity | Auto |
 |---|---|---|---|
-| F1 | 一图一信息，信息写在标题里 | 高 | |
-| F2 | 多面板图已拆开 | 中 | |
-| F3 | 图中文字在投影下可读 | 高 | |
-| F4 | 系列少，重点已高亮 | 中 | |
-| F5 | 直接标注，而不是依赖图例 | 低 | |
-| F6 | 轴有标签和单位 | 高 | |
-| F7 | 表格只保留要讲的数字 | 中 | |
-| F10 | 色盲友好 | 中 | |
+| F1 | One figure, one message; the message is in the title | High | |
+| F2 | Multi-panel figures have been split | Medium | |
+| F3 | Text in figures is readable when projected | High | |
+| F4 | Few series, highlight emphasized | Medium | |
+| F5 | Annotated directly rather than relying on a legend | Low | |
+| F6 | Axes have labels and units | High | |
+| F7 | Tables keep only the numbers to be discussed | Medium | |
+| F10 | Colorblind-friendly | Medium | |
 
-## V — 视觉（视觉风格）
+## V — Visual (Visual Style)
 
-| 编号 | 检查项 | 严重度 | 自动 |
+| ID | Check Item | Severity | Auto |
 |---|---|---|---|
-| V1 | 正文字号足够大（约 24pt 等效以上），没有小于约 12pt 的文字 | 高 | P |
-| V2 | 对比度足够，背景简单 | 高 | |
-| V3 | 字体 ≤ 2–3 种；不用斜体、下划线、全大写做强调 | 低 | P |
-| V4 | 配色克制，颜色含义全篇一致 | 中 | |
-| V5 | 对齐一致，没有元素重叠或超出页面 | 高 | P |
-| V7 | 术语、符号全篇一致；有页码 | 中 | P |
+| V1 | Body text large enough (approx. 24 pt equivalent or above), no text smaller than approx. 12 pt | High | P |
+| V2 | Sufficient contrast, simple background | High | |
+| V3 | Fonts ≤ 2–3 kinds; no emphasis via italics, underline, or all caps | Low | P |
+| V4 | Restrained palette, color meanings consistent throughout | Medium | |
+| V5 | Alignment consistent, no overlapping or off-page elements | High | P |
+| V7 | Terminology and symbols consistent throughout; page numbers present | Medium | P |
 
-## D — 交付
+## D — Delivery
 
-| 编号 | 检查项 | 严重度 | 自动 |
+| ID | Check Item | Severity | Auto |
 |---|---|---|---|
-| D1 | 每页有演讲者备注和过渡句 | 中 | |
-| D2 | 已计时完整练习（人类） / 已逐页渲染检查（agent） | 高 | |
-| D3 | 备份页覆盖预判的问题 | 中 | |
-| D4 | 有 PDF 保底；视频有截图；在线内容有离线版 | 中 | |
+| D1 | Every slide has speaker notes and a transition sentence | Medium | |
+| D2 | Full timed rehearsal completed (human) / Per-slide render check completed (agent) | High | |
+| D3 | Backup slides cover anticipated questions | Medium | |
+| D4 | PDF fallback available; videos have screenshots; online content has offline version | Medium | |
 
-## X — 真实性（准确性）
+## X — Accuracy
 
-| 编号 | 检查项 | 严重度 | 自动 |
+| ID | Check Item | Severity | Auto |
 |---|---|---|---|
-| X1 | 所有数字、结果、引用都能追溯到用户材料或可核实来源 | 高 | |
-| X2 | 缺失的信息用明显的占位符标注，并告知了用户 | 高 | |
+| X1 | All numbers, results, and citations are traceable to user materials or verifiable sources | High | |
+| X2 | Missing information is marked with obvious placeholders and the user has been informed | High | |
 
-## 评审输出格式
+## Review Output Format
 
 ```
-## 评审结果：<演示文稿名称>
-脚本：check_deck_pdf.py → N ERROR / M WARN；lint_storyline.py → …
+## Review Result: <Presentation Name>
+Scripts: check_deck_pdf.py → N ERROR / M WARN; lint_storyline.py → ...
 
-### 高
-- [T6] 第 22 页：最后一页主内容只有「Thank you」→ 改成重申核心信息的结论页
-- [S2] 第 5、9、14 页：标题「Results」→ 改为……
-### 中
+### High
+- [T6] Page 22: Last main slide only says "Thank you" → Change to a conclusion slide that restates the core message
+- [S2] Pages 5, 9, 14: Title "Results" → Change to...
+### Medium
 - …
-### 低
+### Low
 - …
 ```

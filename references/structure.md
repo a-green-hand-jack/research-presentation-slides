@@ -1,102 +1,102 @@
-# 结构：搭故事线
+# Structure: Building the Storyline
 
-第 2 步的细则。
+Details for Step 2.
 
-## 目录
-1. 沙漏结构
-2. 从结果倒推的规划顺序
-3. 通用骨架
-4. 报纸式论证
-5. 套娃分层（适配不同时长）
-6. 开场
-7. 文献综述放哪
-8. 结尾
-9. 导航与过渡
-10. 时长与页数
+## Table of Contents
+1. Hourglass Structure
+2. Planning Backward from Results
+3. General Skeleton
+4. Newspaper-Style Argument
+5. Nested Layers (Adapting to Different Durations)
+6. Opening
+7. Where to Put the Literature Review
+8. Ending
+9. Navigation and Transitions
+10. Duration and Slide Count
 
-## 1. 沙漏结构
+## 1. Hourglass Structure
 
-讲述时：从观众都关心的大问题开始（宽）→ 收窄到你的具体问题、方法、结果（窄）→ 再展开到意义和影响，回到大问题（宽）。
+When presenting: start from the big question everyone cares about (wide) → narrow down to your specific question, method, and results (narrow) → expand again to significance and impact, returning to the big question (wide).
 
-## 2. 从结果倒推的规划顺序
+## 2. Planning Backward from Results
 
-规划的顺序和讲述的顺序不同。规划时从沙漏最窄处开始：
+The planning order differs from the presentation order. Plan starting from the narrowest point of the hourglass:
 
-1. **解读结果**：每个结果支持什么观点？
-2. **分组**：按「支持哪个观点」分组，而不是按实验先后。分 2–4 组，每组一个主要观点。
-3. **过滤**：不支持这些观点的结果，删掉或放备份页。
-4. **检查论证**：结果真的支持观点吗？观点真的支持核心信息吗？有漏洞就补，或修改核心信息。
-5. **方法**：只讲到观众能看懂结果为止。
-6. **动机**：从全体观众都关心的东西出发，一步步连到你的具体目标。
-7. **影响**：你的工作直接做成了什么？下一步是什么？怎样连回那个大问题？
+1. **Interpret results**: What point does each result support?
+2. **Group**: Group by "which point it supports," not by experimental order. Form 2–4 groups, each with one main point.
+3. **Filter**: Results that do not support these points: delete them or move them to backup slides.
+4. **Check the argument**: Do the results really support the points? Do the points really support the core message? Fix any gaps, or revise the core message.
+5. **Methods**: Cover only enough for the audience to understand the results.
+6. **Motivation**: Start from what the whole audience cares about, and step by step connect to your specific goal.
+7. **Impact**: What did your work directly achieve? What is the next step? How does it connect back to that big question?
 
-## 3. 通用骨架
+## 3. General Skeleton
 
-按需取舍，不必照搬：
+Pick and choose as needed; do not copy blindly:
 
-| 部分 | 回答的问题 | 标签 |
+| Section | Questions it answers | Tags |
 |---|---|---|
-| 开场 | 问题是什么？为什么值得关心？ | 引入、动机、问题 |
-| 贡献预告 | 什么是新的？发现了什么？（一句话，不展开） | 贡献 |
-| 证据（可选） | 先说事实，再给图表 | 结果 |
-| 方法 / 模型 | 怎么做的（够理解结果即可） | 方法 |
-| 结果 | 每页一个结论 | 结果 |
-| 讨论 | 与 2–3 篇最相关工作相比新在哪；局限；意义 | 讨论 |
-| 结论 | 带走什么；回到大问题 | 要点、未来工作 |
-| 备份 | 预判问题的答案、完整表格、详细文献、稳健性检验 | 备份 |
+| Opening | What is the problem? Why is it worth caring about? | Intro, motivation, problem |
+| Contribution preview | What is new? What was discovered? (One sentence, no elaboration) | Contribution |
+| Evidence (optional) | State the fact first, then show the figure | Results |
+| Methods / model | How it was done (just enough to understand the results) | Methods |
+| Results | One conclusion per slide | Results |
+| Discussion | What is new compared to the 2–3 most related works; limitations; significance | Discussion |
+| Conclusion | What to take away; return to the big question | Takeaways, future work |
+| Backup | Answers to anticipated questions, full tables, detailed references, robustness checks | Backup |
 
-预告结果时只说结论，不讲细节和直觉：观众还没看到方法，讲了也听不懂。
+When previewing results, state only the conclusion, not details or intuitions: the audience hasn't seen the methods yet, so they won't understand.
 
-尽早进入正题。在经济学报告里有个说法：十分钟内要讲到你的模型。
+Get to the point early. There is a saying in economics talks: get to your model within ten minutes.
 
-## 4. 报纸式论证
+## 4. Newspaper-Style Argument
 
-先说结论，再说主要步骤，最后说细节，不要像悬疑小说那样把答案留到最后。好处是：
-- 观众始终知道你要去哪里。
-- 时间不够时，可以从后往前砍细节，主线不受影响。
+State the conclusion first, then the main steps, and finally the details. Do not save the answer for the end like a mystery novel. The benefits are:
+- The audience always knows where you are going.
+- When time runs short, you can cut details from the end backward without affecting the main thread.
 
-每一节、每一页也用这个顺序：先给观点，再给证据。
+Apply this order to every section and every slide: give the point first, then the evidence.
 
-## 5. 套娃分层
+## 5. Nested Layers
 
-给每个内容标上层级：
-- **外层**（必讲）：核心信息、主要观点、关键证据。
-- **中层**：完整方法、次要结果。
-- **内层**：细节、扩展、稳健性。
+Assign a level to every piece of content:
+- **Outer layer** (must present): core message, main points, key evidence.
+- **Middle layer**: full methods, secondary results.
+- **Inner layer**: details, extensions, robustness checks.
 
-短报告只讲外层；中等长度加中层；长报告全讲。同一份工作因此可以适配不同时长。现场超时时，跳过内层；讲乱了，退回上一层主线。
+Short talks present only the outer layer; medium-length talks add the middle layer; long talks cover all. The same work can therefore adapt to different durations. If you run out of time on stage, skip the inner layer; if you get lost, fall back to the previous layer's main thread.
 
-在 \`storyline.md\` 中可以用注释标出可跳过的页：\`<!-- skippable -->\`。
+In `storyline.md`, you can mark skippable slides with the comment: `<!-- skippable -->`.
 
-## 6. 开场
+## 6. Opening
 
-- 直接亮出问题或观点，不要先讲领域发展史，也不要先列一长串文献。
-- 开场的头一两句话，提前写下来或背下来，保证开得顺。
-- 从听众都关心的东西开始：对专家，可以是一个具体的问题；对外行，从更大的目标讲起。
+- State the problem or point directly. Do not begin with the history of the field or a long list of references.
+- Write down or memorize the first one or two sentences of the opening to ensure a smooth start.
+- Start from what the audience cares about: for experts, this can be a specific problem; for non-specialists, start from a broader goal.
 
-## 7. 文献综述放哪
+## 7. Where to Put the Literature Review
 
-不要在开头堆文献综述。观众还不了解你的工作，看不出你和别人的区别；多数人也不熟悉文献细节。
-- 在讨论部分，和**最相关的 2–3 篇**对比：说你新在哪里、好在哪里，而不是别人哪里不好。
-- 详细综述放备份页，等懂行的人问起再拿出来。
+Do not pile up a literature review at the beginning. The audience does not yet know your work and cannot see how you differ from others; most are also unfamiliar with the literature details.
+- In the discussion section, compare with the **2–3 most relevant works**: say what is new and better about your work, not what is bad about others.
+- Put the detailed review on backup slides, and bring it out only when an expert asks.
 
-## 8. 结尾
+## 8. Ending
 
-- 重申核心信息，连回开场的大问题。
-- 讲直接影响和下一步。
-- 最后一页主内容是结论页。Q&A 期间屏幕停留最久的通常就是这一页，所以它应该显示你最想让人记住的东西，而不是只有「Thank you」或「Questions?」。致谢可以单独一页，或把署名放在结论页的角落。
+- Reiterate the core message and connect back to the big question from the opening.
+- Discuss the direct impact and next steps.
+- The main content of the last slide should be the conclusion. During Q&A, this is usually the slide that stays on screen the longest, so it should show what you most want people to remember, not just "Thank you" or "Questions?". Acknowledgments can be on a separate slide, or attribution can be placed in the corner of the conclusion slide.
 
-## 9. 导航与过渡
+## 9. Navigation and Transitions
 
-- 每一节开始和结束时，给出简短的回顾和预告：我们从哪来、为什么在这、接下来去哪。
-- 定期把可能跟丢的观众「收回来」：总结一下到目前为止确立了什么。
-- 每页结尾要能自然引出下一页。写不出过渡句，说明顺序有问题。
-- 短报告不需要单独的大纲页；长报告可以有大纲页，并在章节分隔页重复显示，标出当前位置。
+- At the start and end of each section, give a brief review and preview: where we came from, why we are here, and where we are going next.
+- Periodically "reclaim" audience members who may have gotten lost: summarize what has been established so far.
+- The end of every slide should naturally lead to the next. If you cannot write a transition sentence, the order is wrong.
+- Short talks do not need a separate outline slide; long talks can have one, and repeat it on section divider slides with the current position marked.
 
-## 10. 时长与页数
+## 10. Duration and Slide Count
 
-- 用**时间**规划，不要用页数规划。经验值：每页约 1 分钟；信息密集的长篇学术报告可能每页 2–3 分钟。
-- 逐步揭示的页面会让页数变多，这没问题。
-- 某页要讲很久，说明它装了太多东西：拆开，或删掉。
-- 备份页不计入时长。
-- 不要超时。提前讲完没人介意。
+- Plan by **time**, not by slide count. Rule of thumb: about 1 minute per slide; information-dense long academic talks may take 2–3 minutes per slide.
+- Progressive-reveal slides increase the slide count; this is fine.
+- If a slide takes a long time to explain, it contains too much: split it up or delete it.
+- Backup slides do not count toward the duration.
+- Do not run overtime. Finishing early is never a problem.

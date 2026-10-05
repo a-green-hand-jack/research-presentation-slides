@@ -1,41 +1,41 @@
-# 交付：备注、练习、备份页、故障预案
+# Delivery: Speaker Notes, Rehearsal, Backup Slides, Contingency Plans
 
-第 6 步的细则。对应评审清单中的 \`D*\` 条目。重点是那些会反过来影响 slides 本身的准备工作。
+Details for Step 6. Corresponds to the `D*` items in the review checklist. The focus is on preparation work that feeds back into the slides themselves.
 
-## D1 演讲者备注
+## D1 Speaker Notes
 
-- 每页写 2–5 句要说的话，放在工具的演讲者备注里，不要放在页面上。
-- 顺序：先说屏幕上有什么 → 解释、换个说法 → 延伸。
-- 每页写一句过渡句，引到下一页。
-- 开场头一两句话完整写出来。
-- 备注是提示，不是照读的稿子。
+- Write 2–5 sentences of what to say for each slide, placed in the tool's speaker notes, not on the slide itself.
+- Order: first say what is on the screen → explain, rephrase → extend.
+- Write a transition sentence on each slide leading to the next.
+- Write out the first one or two opening sentences in full.
+- Notes are prompts, not a script to read verbatim.
 
-## D2 练习（人类）
+## D2 Rehearsal (Human)
 
-- 计时完整讲一遍。超时的页回到第 3 步拆分或删减。
-- 最好在真人面前练，同事的新鲜眼光最能发现问题；录下自己讲一遍也很有效。
-- 练习中最常暴露的问题：某页讲太久（一页装了多个观点）、有用不上的细节、漏了引用、顺序不对、过渡讲不出来。
-- 练完回去改 slides，然后再练。
+- Time a full run-through. Slides that run over time go back to Step 3 to be split or cut.
+- Best rehearsed in front of real people; a colleague's fresh eyes catch the most problems. Recording yourself is also very effective.
+- Problems most often exposed during rehearsal: a slide takes too long (multiple points crammed into one), unnecessary details, missing citations, wrong order, transitions that don't work.
+- After rehearsing, revise the slides, then rehearse again.
 
-## D3 备份页
+## D3 Backup Slides
 
-- 放在结论页（和致谢页）之后，不计入时长。
-- 内容：预判的问题的答案、完整结果表、消融实验与稳健性检验、详细文献对比、推导、实验设置细节。
-- 主线中可以加跳转链接（在工具支持时），Q&A 时能快速跳过去。
-- 提前讲完时，也可以用备份页讲未来工作，或者回答之前没展开的问题；或者直接结束，没人会介意。
+- Place after the conclusion (and acknowledgments) slide; do not count toward the allotted time.
+- Contents: answers to anticipated questions, full results tables, ablation studies and robustness checks, detailed literature comparisons, derivations, experimental setup details.
+- Add hyperlinks from the main storyline when the tool supports it, so you can jump quickly during Q&A.
+- If you finish early, you can also use backup slides to discuss future work or answer questions you didn't expand on earlier; or simply end—no one will mind.
 
-## D4 技术故障预案
+## D4 Technical Contingency Plan
 
-真实现场几乎不会按计划进行：前一位讲者超时、主办方电脑不兼容、视频播不了、网络卡顿。
+Real venues almost never go according to plan: the previous speaker runs over, the host computer is incompatible, a video won't play, the network lags.
 
-- **PDF 保底**：总带一份 PDF 版本。
-- **视频**：准备一页关键帧截图（开始 / 结束 / 关键时刻）。视频能播时，也可以停在这页把结论讲清楚。
-- **在线内容**（demo、网页）：准备离线截图或录屏。
-- **字体**：嵌入字体或使用常见字体。
-- **动画**：越少越安全，在别人的电脑上最容易出问题。
-- **时间被砍**：提前标好可跳过的页（见 \`structure.md\` 的套娃分层）。
+- **PDF fallback**: Always bring a PDF version.
+- **Video**: Prepare a slide with keyframe screenshots (start / end / critical moment). If the video plays, you can also pause on this slide and explain the conclusion clearly.
+- **Online content** (demo, webpage): Prepare offline screenshots or screen recordings.
+- **Fonts**: Embed fonts or use common fonts.
+- **Animations**: The fewer, the safer—they are the most likely to break on someone else's computer.
+- **Time cut short**: In advance, mark slides that can be skipped (see the nested layering in `structure.md`).
 
-## D5 Q&A 准备
+## D5 Q&A Preparation
 
-- 列出最可能被问的 3–5 个问题，确认备份页里有答案。
-- 重要且显而易见的质疑，主动在正文中回应：「有人可能会认为……但……」。
+- List the 3–5 most likely questions and confirm that the backup slides contain answers.
+- For important and obvious objections, address them proactively in the main content: "One might think … but …"
